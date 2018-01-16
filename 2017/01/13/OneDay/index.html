@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Haoze&#39;s Library">
 <meta property="og:description" content="第一章 Java程序概述Java所具有的特点 简单性 面向对象 网络技能">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-16T13:31:46.210Z">
+<meta property="og:updated_time" content="2018-01-16T14:06:38.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OneDay(待定)">
 <meta name="twitter:description" content="第一章 Java程序概述Java所具有的特点 简单性 面向对象 网络技能">
@@ -419,9 +419,9 @@
 <li>Java的每条语句都要以分号(;)结尾</li>
 <li>点(.)相当于函数调用</li>
 </ol>
-<h3 id="三种注释"><a href="#三种注释" class="headerlink" title="三种注释"></a>三种注释</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//单行注释</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">    多行</span><br><span class="line">    注释</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">*   文档</span><br><span class="line">*   注释</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<h3 id="三种注释"><a href="#三种注释" class="headerlink" title="三种注释"></a>三种注释</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单行注释</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    多行</span></span><br><span class="line"><span class="comment">    注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*   文档</span></span><br><span class="line"><span class="comment">*   注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 <p><strong>注意</strong>：多行注释不允许嵌套使用</p>
 <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>Java是强类型语言</strong><br><strong>8种数据类型= 4整数类型 + 2浮点类型 + 1字符类型 + 1布尔类型</strong></p>
 <ol>
@@ -432,7 +432,19 @@
 <li>double后缀加 D/d</li>
 <li>可为数字增加下划线，增加可读性，编译器自动去除  例：10_000=10000</li>
 <li>浮点数值不适用于无法接受误差的计算，原因：浮点数用二进制表示，二进制无法精确表示分数 1/10<br><strong>表示出错或溢出的三个浮点数值：1.正无穷大 2.负无穷大 3.NaN</strong></li>
-<li>char类型使用单引号(‘’),可以表示十六进制的数值,不建议使用，除非UTF-16代码单元<br>**转义序列 <figure class="highlight plain"><figcaption><span>可以出现在字符常量和字符串之外 例：** ```public static void main(String\u005B\u005D args)```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">**\u005B和\u005D分别是&apos;[&apos;和&apos;]&apos;的编码**</span><br><span class="line">9. Unicode转义序列会在解析代码前得到处理</span><br><span class="line">10. 注释无法注释\u</span><br><span class="line">11. 整型值和布尔值之间不能相互转换</span><br><span class="line">#### 数据类型转换：</span><br><span class="line">            char ---》int ----》double   </span><br><span class="line">byte ---》short ----》int ----》long ----&gt;float   </span><br><span class="line">                      int ----&gt;float </span><br><span class="line">                      long----&gt;double</span><br><span class="line">**》为无数据丢失转换，&gt;为有数据丢失转换**</span><br><span class="line">1. 相对浮点数进行舍入运算，得到最接近的整数```int n = (int)Math.round(x)</span><br></pre></td></tr></table></figure></li>
+<li>char类型使用<strong>单引号</strong>,可以表示十六进制的数值,不建议使用，除非UTF-16代码单元<br><strong>转义序列 <code>\u</code> 可以出现在字符常量和字符串之外 例:</strong><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String\u005B\u005D args)</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<!-- **\u005B和\u005D分别是'['和']'的编码** -->
+<ol>
+<li>Unicode转义序列会在解析代码前得到处理</li>
+<li>注释无法注释\u</li>
+<li>整型值和布尔值之间不能相互转换<h4 id="数据类型转换："><a href="#数据类型转换：" class="headerlink" title="数据类型转换："></a>数据类型转换：</h4></li>
+</ol>
+<p>char —》int —-》double<br>byte —》short —-》int —-》long —-&gt;float<br>int —-&gt;float<br>long—-&gt;double</p>
+<p><strong>》为无数据丢失转换，&gt;为有数据丢失转换</strong></p>
+<ol>
+<li>相对浮点数进行舍入运算，得到最接近的整数<code>int n = (int)Math.round(x)</code></li>
 </ol>
 <h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ol>
 <li>每个变量都有一个类型</li>
@@ -588,7 +600,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -599,7 +611,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -660,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-Java程序概述"><span class="nav-number">1.</span> <span class="nav-text">第一章 Java程序概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java所具有的特点"><span class="nav-number">1.1.</span> <span class="nav-text">Java所具有的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章Java的基本程序设计结构"><span class="nav-number">2.</span> <span class="nav-text">第三章Java的基本程序设计结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">2.1.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种注释"><span class="nav-number">2.2.</span> <span class="nav-text">三种注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">2.3.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量"><span class="nav-number">2.4.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符"><span class="nav-number">2.5.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数学函数："><span class="nav-number">2.5.1.</span> <span class="nav-text">数学函数：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自增自减"><span class="nav-number">2.5.2.</span> <span class="nav-text">自增自减</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-Java程序概述"><span class="nav-number">1.</span> <span class="nav-text">第一章 Java程序概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java所具有的特点"><span class="nav-number">1.1.</span> <span class="nav-text">Java所具有的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章Java的基本程序设计结构"><span class="nav-number">2.</span> <span class="nav-text">第三章Java的基本程序设计结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">2.1.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种注释"><span class="nav-number">2.2.</span> <span class="nav-text">三种注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">2.3.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型转换："><span class="nav-number">2.3.1.</span> <span class="nav-text">数据类型转换：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量"><span class="nav-number">2.4.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符"><span class="nav-number">2.5.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数学函数："><span class="nav-number">2.5.1.</span> <span class="nav-text">数学函数：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自增自减"><span class="nav-number">2.5.2.</span> <span class="nav-text">自增自减</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
