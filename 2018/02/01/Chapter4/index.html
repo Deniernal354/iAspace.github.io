@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Haoze&#39;s Library">
 <meta property="og:description" content="第四章  对象与类面向对程序设计 面想对象的程序是由对象组成的 类是构造对象的模板或蓝图 由类构造对象的过程被称为创建类的实例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-26T14:34:51.582Z">
+<meta property="og:updated_time" content="2018-02-27T07:08:39.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 4">
 <meta name="twitter:description" content="第四章  对象与类面向对程序设计 面想对象的程序是由对象组成的 类是构造对象的模板或蓝图 由类构造对象的过程被称为创建类的实例">
@@ -410,13 +410,18 @@
 <h5 id="关键"><a href="#关键" class="headerlink" title="关键"></a>关键</h5><p><strong>不能让类的方法直接访问其他类的实例域</strong></p>
 <h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><ol>
 <li>想使用对象必须先构造对象，并指定其初始状态</li>
-<li>构造器构造实例<h5 id="三个特性"><a href="#三个特性" class="headerlink" title="三个特性"></a>三个特性</h5></li>
+<li>任何对象变量的值都是对储存在另一个地方的一个对象的引用</li>
+<li>new操作符返回的也是一个引用</li>
+<li>使用<strong>静态工厂方法</strong>代表你调用的构造器<br><strong>例：</strong><code>LocalDate.now()</code>会构造一个新对象，表示构造时日期</li>
+<li>只访问不修改对象的方法称为：访问器</li>
+</ol>
+<h5 id="三个特性"><a href="#三个特性" class="headerlink" title="三个特性"></a>三个特性</h5><ol>
 <li>对象的行为 —- 对对象进行的操作</li>
 <li>对象的状态 —- 对对象进行操作时，对象如何响应</li>
 <li>对象的标识 —- 识别相同行为、相同状态的不同对象<br><strong>每个对象都有一个唯一的身份</strong></li>
 </ol>
 <h4 id="类之间的关系"><a href="#类之间的关系" class="headerlink" title="类之间的关系"></a>类之间的关系</h4><p><strong>依赖 聚合  继承</strong></p>
-
+<h4 id="用户自定义类"><a href="#用户自定义类" class="headerlink" title="用户自定义类"></a>用户自定义类</h4>
       
     </div>
     
@@ -620,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章-对象与类"><span class="nav-number">1.</span> <span class="nav-text">第四章  对象与类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对程序设计"><span class="nav-number">1.1.</span> <span class="nav-text">面向对程序设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#封装"><span class="nav-number">1.1.1.</span> <span class="nav-text">封装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#关键"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">关键</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象"><span class="nav-number">1.1.2.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#三个特性"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">三个特性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类之间的关系"><span class="nav-number">1.1.3.</span> <span class="nav-text">类之间的关系</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章-对象与类"><span class="nav-number">1.</span> <span class="nav-text">第四章  对象与类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对程序设计"><span class="nav-number">1.1.</span> <span class="nav-text">面向对程序设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#封装"><span class="nav-number">1.1.1.</span> <span class="nav-text">封装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#关键"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">关键</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象"><span class="nav-number">1.1.2.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#三个特性"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">三个特性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类之间的关系"><span class="nav-number">1.1.3.</span> <span class="nav-text">类之间的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户自定义类"><span class="nav-number">1.1.4.</span> <span class="nav-text">用户自定义类</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
