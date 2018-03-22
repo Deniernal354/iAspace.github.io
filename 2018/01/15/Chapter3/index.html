@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="第三章  Java的基本程序设计结构注意 Java区分大小写 修饰符用于控制程序的部分对这一段代码的访问权限 Java应用程序的全部内容都应该放在类中 类名开头为大写字母，其后可跟字母数字，长度不限，不能使用Java的保留字，源代码文件名必须和公共类名字相同 JavaSE1.4及以上版本规定main()方法必须是pub">
+<meta name="description" content="第三章  Java的基本程序设计结构注意 Java区分大小写 修饰符用于控制程序的其他部分对这段代码的访问级别 Java应用程序的全部内容都应该放在类中 类名开头为大写字母，其后可跟字母数字，长度不限，不能使用Java的保留字，源代码文件名必须和公共类名字相同 JavaSE1.4及以上版本规定main()方法必须是pu">
 <meta name="keywords" content="Java,Core Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chapter 3">
 <meta property="og:url" content="http://yoursite.com/2018/01/15/Chapter3/index.html">
 <meta property="og:site_name" content="「 」&#39;s Library">
-<meta property="og:description" content="第三章  Java的基本程序设计结构注意 Java区分大小写 修饰符用于控制程序的部分对这一段代码的访问权限 Java应用程序的全部内容都应该放在类中 类名开头为大写字母，其后可跟字母数字，长度不限，不能使用Java的保留字，源代码文件名必须和公共类名字相同 JavaSE1.4及以上版本规定main()方法必须是public的 Java的每条语句都要以分号(;)结尾 点(.)相当于函数调用">
+<meta property="og:description" content="第三章  Java的基本程序设计结构注意 Java区分大小写 修饰符用于控制程序的其他部分对这段代码的访问级别 Java应用程序的全部内容都应该放在类中 类名开头为大写字母，其后可跟字母数字，长度不限，不能使用Java的保留字，源代码文件名必须和公共类名字相同 JavaSE1.4及以上版本规定main()方法必须是public的 Java的每条语句都要以分号(;)结尾 点(.)相当于函数调用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-26T13:09:47.146Z">
+<meta property="og:updated_time" content="2018-03-21T07:39:27.566Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 3">
-<meta name="twitter:description" content="第三章  Java的基本程序设计结构注意 Java区分大小写 修饰符用于控制程序的部分对这一段代码的访问权限 Java应用程序的全部内容都应该放在类中 类名开头为大写字母，其后可跟字母数字，长度不限，不能使用Java的保留字，源代码文件名必须和公共类名字相同 JavaSE1.4及以上版本规定main()方法必须是public的 Java的每条语句都要以分号(;)结尾 点(.)相当于函数调用">
+<meta name="twitter:description" content="第三章  Java的基本程序设计结构注意 Java区分大小写 修饰符用于控制程序的其他部分对这段代码的访问级别 Java应用程序的全部内容都应该放在类中 类名开头为大写字母，其后可跟字母数字，长度不限，不能使用Java的保留字，源代码文件名必须和公共类名字相同 JavaSE1.4及以上版本规定main()方法必须是public的 Java的每条语句都要以分号(;)结尾 点(.)相当于函数调用">
 
 
 
@@ -399,7 +399,7 @@
       
         <h2 id="第三章-Java的基本程序设计结构"><a href="#第三章-Java的基本程序设计结构" class="headerlink" title="第三章  Java的基本程序设计结构"></a>第三章  Java的基本程序设计结构</h2><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
 <li>Java区分大小写</li>
-<li>修饰符用于控制程序的部分对这一段代码的访问权限</li>
+<li>修饰符用于控制程序的其他部分对这段代码的访问级别</li>
 <li>Java应用程序的全部内容都应该放在类中</li>
 <li>类名开头为大写字母，其后可跟字母数字，长度不限，不能使用Java的保留字，源代码文件名必须和公共类名字相同</li>
 <li>JavaSE1.4及以上版本规定main()方法必须是public的</li>
@@ -411,35 +411,31 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    多行</span></span><br><span class="line"><span class="comment">    注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*   文档</span></span><br><span class="line"><span class="comment">*   注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 <p><strong>注意</strong>：多行注释不允许嵌套使用</p>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>Java是强类型语言</strong><br><strong>8种数据类型= 4整数类型 + 2浮点类型 + 1字符类型 + 1布尔类型</strong></p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>Java是强类型语言</strong><br><strong>8种基本数据类型= 4整数类型 + 2浮点类型 + 1字符类型 + 1布尔类型</strong></p>
 <ol>
-<li>长整数后缀加 L/l</li>
-<li>十六进制前缀加 0X/0x</li>
-<li>二进制前缀加 OB/ob</li>
-<li>float后缀加 F/f</li>
-<li>double后缀加 D/d</li>
-<li>可为数字增加下划线，增加可读性，编译器自动去除  例：10_000=10000</li>
-<li>浮点数值不适用于无法接受误差的计算，原因：浮点数用二进制表示，二进制无法精确表示分数 1/10<br><strong>表示出错或溢出的三个浮点数值：1.正无穷大 2.负无穷大 3.NaN</strong></li>
-<li>char类型使用<strong>单引号</strong>,可以表示十六进制的数值,不建议使用，除非UTF-16代码单元<br><strong>转义序列 <code>\u</code> 可以出现在字符常量和字符串之外 例:</strong><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String\u005B\u005D args)</span></span></span><br></pre></td></tr></table></figure>
+<li>浮点数值不适用于无法接受误差的计算。原因：浮点数用二进制表示，二进制无法精确表示分数 1/10</li>
+<li>表示出错或溢出的三个浮点数值：<strong>1.正无穷大  2.负无穷大  3.NaN</strong></li>
+<li>char类型使用<strong>单引号</strong>,可以表示十六进制的数值。不建议使用Char类型,除非UTF-16代码单元.</li>
+<li>Unicode转义序列会在解析代码前得到处理</li>
+<li>整型值和布尔值之间不能相互转换</li>
+<li>注释无法注释<code>\u</code></li>
+<li>转义序列 <code>\u</code> 可以出现在字符常量和字符串之外 例:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String\u005B\u005D args)</span></span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<!-- **\u005B和\u005D分别是'['和']'的编码** -->
-<ol>
-<li>Unicode转义序列会在解析代码前得到处理</li>
-<li>注释无法注释\u</li>
-<li>整型值和布尔值之间不能相互转换</li>
-</ol>
-<h4 id="数据类型转换："><a href="#数据类型转换：" class="headerlink" title="数据类型转换："></a>数据类型转换：</h4><p>char —》int —-》double<br>byte —》short —-》int —-》long —-&gt;float<br>int —-&gt;float<br>long—-&gt;double</p>
-<p><strong>》为无数据丢失转换，&gt;为有数据丢失转换</strong><br><strong>相对浮点数进行舍入运算，得到最接近的整数<code>int n = (int)Math.round(x)</code></strong></p>
+<h4 id="数据类型转换："><a href="#数据类型转换：" class="headerlink" title="数据类型转换："></a>数据类型转换：</h4><pre><code>char ---》int ----》double   
+byte ---》short ----》int ----》long ----&gt;float   
+int ----&gt;float 
+long----&gt;double
+</code></pre><p><strong>》为无数据丢失转换，&gt;为有数据丢失转换</strong></p>
 <h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ol>
-<li>每个变量都有一个类型</li>
-<li>Java保留字不能作为变量名</li>
-<li>逐一声明变量可提高代码的可读性</li>
-<li>不要使用未初始化的变量变量的声明尽可能靠近变量第一次使用的地方</li>
-<li><code>final</code>指示常量，常量只能被赋值一次，常量名使用后大写</li>
-<li>类常量可以在一个类的多个方法中使用，也用关键词<code>static final</code>设置</li>
+<li>每个变量都有一个<strong>类型</strong></li>
+<li><strong>Java保留字</strong>不能作为变量名</li>
+<li>逐一声明变量可提高代码的<strong>可读性</strong></li>
+<li>不要使用<strong>未初始化的变量</strong>,变量的声明尽可能靠近变量第一次使用的地方</li>
+<li><code>final</code>指示<strong>常量</strong>，常量只能被赋值一次，常量名通常用大写</li>
+<li><strong>类常量</strong>可以在一个类的多个方法中使用，也用关键词<code>static final</code>设置</li>
 </ol>
-<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p><strong>0/整数会产生一个异常， 0/浮点数=无穷大/NaN</strong></p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p><strong>0除以整数会产生一个异常， 0除以浮点数=无穷大除以NaN</strong></p>
 <h4 id="数学函数："><a href="#数学函数：" class="headerlink" title="数学函数："></a>数学函数：</h4><ol>
 <li>Math类中的sqrt方法处理的不是对象，被称为静态方法</li>
 <li><code>Math.pow()</code>进行幂运算</li>
