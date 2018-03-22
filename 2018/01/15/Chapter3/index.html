@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="「 」&#39;s Library">
 <meta property="og:description" content="第三章  Java的基本程序设计结构注意 Java区分大小写 修饰符用于控制程序的其他部分对这段代码的访问级别 Java应用程序的全部内容都应该放在类中 类名开头为大写字母，其后可跟字母数字，长度不限，不能使用Java的保留字，源代码文件名必须和公共类名字相同 JavaSE1.4及以上版本规定main()方法必须是public的 Java的每条语句都要以分号(;)结尾 点(.)相当于函数调用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-21T07:39:27.566Z">
+<meta property="og:updated_time" content="2018-03-22T08:44:13.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 3">
 <meta name="twitter:description" content="第三章  Java的基本程序设计结构注意 Java区分大小写 修饰符用于控制程序的其他部分对这段代码的访问级别 Java应用程序的全部内容都应该放在类中 类名开头为大写字母，其后可跟字母数字，长度不限，不能使用Java的保留字，源代码文件名必须和公共类名字相同 JavaSE1.4及以上版本规定main()方法必须是public的 Java的每条语句都要以分号(;)结尾 点(.)相当于函数调用">
@@ -437,24 +437,24 @@ long----&gt;double
 </ol>
 <h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p><strong>0除以整数会产生一个异常， 0除以浮点数=无穷大除以NaN</strong></p>
 <h4 id="数学函数："><a href="#数学函数：" class="headerlink" title="数学函数："></a>数学函数：</h4><ol>
-<li>Math类中的sqrt方法处理的不是对象，被称为静态方法</li>
-<li><code>Math.pow()</code>进行幂运算</li>
-<li><code>floorMod()</code>方法的目的是解决整数余数问题</li>
-<li><code>Math.PI</code> 表示π</li>
+<li><code>Math</code>类中的<code>sqrt()</code>处理的不是对象，被称为<strong>静态方法</strong></li>
+<li><code>Math.pow()</code>进行<strong>幂运算</strong></li>
+<li><code>floorMod()</code>方法的目的是<strong>解决整数余数</strong>问题</li>
+<li><code>Math.PI</code> 表示<strong>π</strong></li>
 </ol>
 <h4 id="自增自减"><a href="#自增自减" class="headerlink" title="自增自减"></a>自增自减</h4><p><code>n++/n--</code>,<strong>前缀形式先完成加一或减一，而后缀形式会使用变量原来的值，不要在表达式中使用</strong></p>
 <h4 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h4><p><strong><code>?:</code> 为三元运算符 例：<code>x&gt;y?x:y</code> 结果为x,y中较大的</strong></p>
 <h4 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h4><p>…</p>
 <h4 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h4><p><strong>变量的取值在一个有限的集合中.可自定义枚举类型,枚举类型包括有限个命名的值.</strong><br><strong>例:</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Size&#123;SMALL,MEDIUM,LARGE&#125;</span><br><span class="line">Size s = Size.SMALL;</span><br></pre></td></tr></table></figure></p>
 <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ol>
-<li>Java语法允许用<code>+</code>号连接两个字符串</li>
-<li>任何一个Java对象都可以转化为字符串</li>
-<li>把多个字符串放在一起用一个界定符分隔，可以用静态<code>join()</code>方法<br><code>String all = String.join(&quot;/&quot;,&quot;S&quot;,&quot;M&quot;,&quot;L&quot;); // all is the String &quot;S/M/L&quot;</code></li>
-<li><code>String</code>类对象为不可变字符串。优点：编译器可以让字符串常量共享</li>
-<li>可以使用<code>equals()</code>方法检测两个字符串是否相等，<code>equalsIgnoreCase()</code>方法不区分大小写</li>
-<li><strong>一定不要</strong>使用<code>==</code>运算符检测两个字符串是否相等，只能判定字符串是否放在同一个位置</li>
-<li>空字符串和NULL字符串不同</li>
-<li>可用<code>StringBuilder</code>构建字符串</li>
+<li>Java语法允许用<code>+</code>号<strong>连接</strong>两个字符串</li>
+<li>任何一个Java对象都可以转化为一个<strong>字符串</strong></li>
+<li>把多个字符串放在一起用一个<strong>界定符</strong>分隔，可以用静态<code>join()</code>方法<br><code>String all = String.join(&quot;/&quot;,&quot;S&quot;,&quot;M&quot;,&quot;L&quot;); // all is the String &quot;S/M/L&quot;</code></li>
+<li><code>String</code>类对象为<strong>不可变字符串</strong>。优点：编译器可以让字符串<strong>常量共享</strong></li>
+<li>可以使用<code>equals()</code>方法检测两个字符串是否<strong>相等</strong>，<code>equalsIgnoreCase()</code>方法不区分大小写</li>
+<li><strong>一定不要</strong>使用<code>==</code>运算符检测两个字符串是否相等，只能判定<strong>字符串是否放在同一个位置</strong></li>
+<li>空字符串和<strong>NULL</strong>字符串不同</li>
+<li>可用<code>StringBuilder</code><strong>构建字符串</strong></li>
 </ol>
 <h4 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h4><p><strong>读取输入：构建一个<code>Scanner</code>对象和<code>System.in</code>关联</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure></p>
 <ol>
@@ -492,7 +492,7 @@ long----&gt;double
 <li>初始化匿名数组<code>new int[]={1,2,3};</code></li>
 <li>元素的初始化为<code>0</code>，布尔数组元素的初始化为<code>false</code>，对象数组的元素初始化为<code>NULL</code></li>
 <li>获得元素个数可用<code>array.length</code>，一旦创建不能更改大小</li>
-<li>Java允许数组长度为0，<code>new elementType[0]</code>, 长度为<code>0!=null</code></li>
+<li>Java允许数组长度为0，<code>new elementType[0]</code>, 长度为0,<code>0!=null</code></li>
 <li>数组排序：<code>Arrays.sort()</code></li>
 </ol>
 <h4 id="增强for循环-for-each-循环"><a href="#增强for循环-for-each-循环" class="headerlink" title="增强for循环(for each 循环)"></a>增强for循环(for each 循环)</h4><p><code>for(variable:condition) statement</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> a : array)</span><br><span class="line">    System.out.println(a);</span><br></pre></td></tr></table></figure></p>
@@ -625,7 +625,7 @@ long----&gt;double
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

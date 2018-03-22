@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="第四章  对象与类面向对程序设计 面想对象的程序是由对象组成的 类是构造对象的模板或蓝图 由类构造对象的过程被称为创建类的实例">
+<meta name="description" content="第四章  对象与类面向对程序设计 面向对象的程序是由对象组成的 类是构造对象的模板/蓝图 由类构造对象的过程被称为创建类的实例">
 <meta name="keywords" content="Java,Core Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chapter 4">
 <meta property="og:url" content="http://yoursite.com/2018/02/01/Chapter4/index.html">
 <meta property="og:site_name" content="「 」&#39;s Library">
-<meta property="og:description" content="第四章  对象与类面向对程序设计 面想对象的程序是由对象组成的 类是构造对象的模板或蓝图 由类构造对象的过程被称为创建类的实例">
+<meta property="og:description" content="第四章  对象与类面向对程序设计 面向对象的程序是由对象组成的 类是构造对象的模板/蓝图 由类构造对象的过程被称为创建类的实例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-14T15:03:47.857Z">
+<meta property="og:updated_time" content="2018-03-22T09:03:51.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 4">
-<meta name="twitter:description" content="第四章  对象与类面向对程序设计 面想对象的程序是由对象组成的 类是构造对象的模板或蓝图 由类构造对象的过程被称为创建类的实例">
+<meta name="twitter:description" content="第四章  对象与类面向对程序设计 面向对象的程序是由对象组成的 类是构造对象的模板/蓝图 由类构造对象的过程被称为创建类的实例">
 
 
 
@@ -398,22 +398,22 @@
 
       
         <h2 id="第四章-对象与类"><a href="#第四章-对象与类" class="headerlink" title="第四章  对象与类"></a>第四章  对象与类</h2><h3 id="面向对程序设计"><a href="#面向对程序设计" class="headerlink" title="面向对程序设计"></a>面向对程序设计</h3><ol>
-<li>面想对象的程序是由<strong>对象</strong>组成的</li>
-<li><strong>类</strong>是构造对象的模板或蓝图</li>
+<li>面向对象的程序是由<strong>对象</strong>组成的</li>
+<li><strong>类</strong>是构造对象的模板/蓝图</li>
 <li>由类构造对象的过程被称为<strong>创建类的实例</strong></li>
 </ol>
 <a id="more"></a>
 <h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><ol>
-<li>将数据和行为组合在一个包中，并对对象的使用者隐藏了数据的实现方法</li>
+<li>将数据和行为组合在一个包中，并对对象的使用者隐藏数据的实现方法</li>
 <li>对象中的数据为<strong>实例域</strong>，操纵数据的过程为<strong>方法</strong></li>
 </ol>
 <h5 id="关键"><a href="#关键" class="headerlink" title="关键"></a>关键</h5><p><strong>不能让类的方法直接访问其他类的实例域</strong></p>
 <h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><ol>
-<li>想使用对象必须先构造对象，并指定其初始状态</li>
-<li>任何对象变量的值都是对储存在另一个地方的一个对象的引用</li>
-<li>new操作符返回的也是一个引用</li>
+<li>想使用对象必须先<strong>构造对象</strong>，并指定其初始状态</li>
+<li>任何对象变量的值都是对储存在另一个地方的对象的<strong>引用</strong></li>
+<li><code>new</code>操作符返回的也是一个<strong>引用</strong></li>
 <li>使用<strong>静态工厂方法</strong>代表你调用的构造器<br><strong>例：</strong><code>LocalDate.now()</code>会构造一个新对象，表示构造时日期</li>
-<li>只访问不修改对象的方法称为：访问器</li>
+<li>只访问不修改对象的方法称为：<strong>访问器</strong></li>
 </ol>
 <h5 id="三个特性"><a href="#三个特性" class="headerlink" title="三个特性"></a>三个特性</h5><ol>
 <li>对象的行为 —- 对对象进行的操作</li>
@@ -422,23 +422,23 @@
 </ol>
 <h4 id="类之间的关系"><a href="#类之间的关系" class="headerlink" title="类之间的关系"></a>类之间的关系</h4><p><strong>依赖(“uses - a”) 聚合(“has - a”)  继承(“is - a”)</strong></p>
 <h4 id="用户自定义类"><a href="#用户自定义类" class="headerlink" title="用户自定义类"></a>用户自定义类</h4><ol>
-<li>源文件名必须与pulic类的名字相匹配</li>
-<li>在源文件中只能有一个公共类，但可以有任意数目的非公共类</li>
-<li>最好用<code>private</code> 标记实例域</li>
-<li>类通常包括类型属于某个类类型的实例域</li>
+<li>源文件名必须与<code>pulic</code>类的名字<strong>相匹配</strong></li>
+<li>在源文件中只能有<strong>一个公共类</strong>，但可以有任意数目的非公共类</li>
+<li>最好用<code>private</code> 标记<strong>实例域</strong></li>
+<li>类通常包括类型属于<strong>某个类类型</strong>的实例域</li>
 </ol>
 <h5 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h5><ol>
-<li>构造器与类同名</li>
-<li>构造对象时构造器会运行，以便将实例域初始化</li>
-<li>构造器伴随<code>new</code>被调用，不能对存在的对象调用来重置实例域</li>
-<li>一个类有一个以上构造器，有任意个参数，没有返回值</li>
+<li>构造器与类<strong>同名</strong></li>
+<li>构造对象时构造器会<strong>运行</strong>，以便将实例域初始化</li>
+<li>构造器伴随<code>new</code>被<strong>调用</strong>，不能对存在的对象调用来重置实例域</li>
+<li>一个类有<strong>一个以上</strong>构造器，有<strong>任意</strong>个参数，<strong>没有</strong>返回值</li>
 </ol>
 <h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><ol>
-<li>final实例域构造对象必须初始化这样的域</li>
-<li>对象构造之后这个值不能被修改，即没有set方法</li>
+<li>final实例域构造对象<strong>必须</strong>初始化这样的域</li>
+<li>对象构造之后这个值<strong>不能</strong>被修改，即没有set方法</li>
 </ol>
 <h4 id="静态"><a href="#静态" class="headerlink" title="静态"></a>静态</h4><h5 id="静态域"><a href="#静态域" class="headerlink" title="静态域"></a>静态域</h5><ol>
-<li>将域定义为<code>static</code>，每个类中只有一个这样的域</li>
+<li>将域定义为<code>static</code>，每个类中只有<strong>一个</strong>这样的域</li>
 <li>静态域属于类，不属于任何独立的对象，即使没有一个对象静态域也存在，即使有100个对象静态域也只有一个</li>
 </ol>
 <h5 id="静态常量"><a href="#静态常量" class="headerlink" title="静态常量"></a>静态常量</h5><ol>
@@ -578,6 +578,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/02/12/Chapter5/" rel="prev" title="Chapter 5">
+                Chapter 5 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -657,7 +661,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
