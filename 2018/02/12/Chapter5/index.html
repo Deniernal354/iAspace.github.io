@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="「 」&#39;s Library">
 <meta property="og:description" content="第五章 继承类 超类 子类定义子类 关键词extends表示继承 在Java中的所有继承都是公有继承 已存在的类被称为超类/父类，新类被称为子类">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T14:23:26.927Z">
+<meta property="og:updated_time" content="2018-03-23T07:17:31.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 5">
 <meta name="twitter:description" content="第五章 继承类 超类 子类定义子类 关键词extends表示继承 在Java中的所有继承都是公有继承 已存在的类被称为超类/父类，新类被称为子类">
@@ -426,7 +426,78 @@
 <li>在Java程序设计中对象变量是多态的。一个超类对象可以引用它的任何一个子类对象</li>
 <li>不能将一个超类的引用赋给子类变量</li>
 </ol>
-<p>…</p>
+<h4 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h4><ol>
+<li>编译器查看对象的声明类型和方法名</li>
+<li>编译器将查看调用方法时提供的参数类型，方法中存在一个与提供的参数完全匹配的方法，称为<strong>重载解析</strong></li>
+<li>如果是<code>private</code>、<code>static</code>、<code>final</code>方法或构造器，编译器将准确知道调用那种方法，这种调用方式被称为<strong>静态绑定</strong></li>
+<li>当程序采用动态绑定调用时，虚拟机将调用与引用方法实际类型最为接近的类的方法<br><strong>动态绑定特性:无需对现存的代码进行修改，就可以对程序进行扩展</strong></li>
+</ol>
+<h4 id="阻止继承"><a href="#阻止继承" class="headerlink" title="阻止继承"></a>阻止继承</h4><ol>
+<li>final的类和方法，不允许扩展的类被称为final类</li>
+<li>定义类时使用final修饰符，这个类就是final类</li>
+<li>类的特定方法也可以被声明为final，子类就不能覆盖这个方法</li>
+<li>如果将一个类定义为final，则方法自动成为final</li>
+<li>目的是确保他们不会在子类中改变语义</li>
+</ol>
+<h4 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h4><ol>
+<li>将一个类型强制转换成另一个类型的过程称为类型转换</li>
+<li>唯一原因:在暂时忽视对象的类型之后，使用对象的全部功能</li>
+<li>将一个超类的引用赋给一个子类时，必须进行类型转换，反之则不用进行</li>
+<li>在进行类型转换之前先用<code>instanceof</code>查看是否能够成功的进行转换</li>
+<li>只能在继承层次内进行类型转换，在超类转换为子类之前，应使用<code>instanceof</code>进行检查</li>
+</ol>
+<h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><ol>
+<li>在类的继承层次中，上层的类应该更具有通用性、更加抽象</li>
+<li>使用关键词<code>abstranct</code>可以不用实现方法</li>
+<li>包含一个或多个抽象方法的类，本身必须被声明为抽象的</li>
+<li>抽象类可包含具体的数据和方法</li>
+<li>类不含抽象方法也可定义抽象类</li>
+<li>抽象类不能被实例化</li>
+<li>可以定义一个抽象类的对象变量，但它只能引用非抽象子类的对象</li>
+</ol>
+<h5 id="扩展抽象类"><a href="#扩展抽象类" class="headerlink" title="扩展抽象类"></a>扩展抽象类</h5><ol>
+<li>在抽象类中定义部分抽象类方法或不定义，则子类也必须是抽象的</li>
+<li>定义所有抽象方法，则子类不是抽象的</li>
+</ol>
+<h5 id="受保护访问"><a href="#受保护访问" class="headerlink" title="受保护访问"></a>受保护访问</h5><p>超类的某些方法被子类访问,或子类方法访问超类的某个域则需要<code>protected</code></p>
+<h4 id="控制可见的四个访问修饰符"><a href="#控制可见的四个访问修饰符" class="headerlink" title="控制可见的四个访问修饰符"></a>控制可见的四个访问修饰符</h4><ol>
+<li>对本类可见 — private</li>
+<li>对所有类可见 — public</li>
+<li>对本包和所有子类可见 — protected</li>
+<li>对本包可见 — 默认</li>
+</ol>
+<h3 id="Object：所有类的超类"><a href="#Object：所有类的超类" class="headerlink" title="Object：所有类的超类"></a>Object：所有类的超类</h3><ol>
+<li>在Java中每个类都是由它扩展来的</li>
+<li>可以用Object类型的变量引用任何类型的对象</li>
+<li>Object类型的变量只能作用于各种值通用持有者</li>
+<li>在Java中只有基本类型不是对象，所有数组都扩展了Object</li>
+</ol>
+<h4 id="hashcode方法"><a href="#hashcode方法" class="headerlink" title="hashcode方法"></a>hashcode方法</h4><ol>
+<li>散列码是由对象导出的一个整形值</li>
+<li>散列码是没有规律的</li>
+<li>hashcode方法定义在Object类中，每个对象都有一个默认的散列码，其值为对象的存储地址</li>
+</ol>
+<h3 id="泛型数组列表"><a href="#泛型数组列表" class="headerlink" title="泛型数组列表"></a>泛型数组列表</h3><p>ArrayList是一个采用类型参数的泛型类</p>
+<h4 id="对象包装器和自动装箱"><a href="#对象包装器和自动装箱" class="headerlink" title="对象包装器和自动装箱"></a>对象包装器和自动装箱</h4><ol>
+<li>所有的基本数据类型都有一个与之对应的类，这些类被称为包装器</li>
+<li>对象包装器是不可变的，不能定义子类，不能更改数值</li>
+</ol>
+<h3 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h3><p><strong>能够分析类能力的程序称为反射</strong></p>
+<ol>
+<li>在运行时分析类的能力</li>
+<li>在运行时查看对象</li>
+<li>实现通用的数组操作代码</li>
+<li>利用Method对象<br>…</li>
+</ol>
+<h3 id="继承的设计技巧"><a href="#继承的设计技巧" class="headerlink" title="继承的设计技巧"></a>继承的设计技巧</h3><ol>
+<li>将公共操作和域放在超类中</li>
+<li>不要使用受保护的类</li>
+<li>使用继承实现”is-a”关系</li>
+<li>除非所有继承的方法都是有意义的，否则不要用继承</li>
+<li>再覆盖方法时，不要改变预期的行为</li>
+<li>使用多态而非类型信息</li>
+<li>不要过多使用反射</li>
+</ol>
 
       
     </div>
@@ -631,7 +702,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章-继承"><span class="nav-number">1.</span> <span class="nav-text">第五章 继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类-超类-子类"><span class="nav-number">1.1.</span> <span class="nav-text">类 超类 子类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义子类"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义子类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#覆盖方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">覆盖方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子类的构造器"><span class="nav-number">1.1.3.</span> <span class="nav-text">子类的构造器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承层次"><span class="nav-number">1.1.4.</span> <span class="nav-text">继承层次</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态"><span class="nav-number">1.1.5.</span> <span class="nav-text">多态</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章-继承"><span class="nav-number">1.</span> <span class="nav-text">第五章 继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类-超类-子类"><span class="nav-number">1.1.</span> <span class="nav-text">类 超类 子类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义子类"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义子类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#覆盖方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">覆盖方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子类的构造器"><span class="nav-number">1.1.3.</span> <span class="nav-text">子类的构造器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承层次"><span class="nav-number">1.1.4.</span> <span class="nav-text">继承层次</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态"><span class="nav-number">1.1.5.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法调用"><span class="nav-number">1.1.6.</span> <span class="nav-text">方法调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阻止继承"><span class="nav-number">1.1.7.</span> <span class="nav-text">阻止继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强制类型转换"><span class="nav-number">1.1.8.</span> <span class="nav-text">强制类型转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象类"><span class="nav-number">1.1.9.</span> <span class="nav-text">抽象类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#扩展抽象类"><span class="nav-number">1.1.9.1.</span> <span class="nav-text">扩展抽象类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#受保护访问"><span class="nav-number">1.1.9.2.</span> <span class="nav-text">受保护访问</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制可见的四个访问修饰符"><span class="nav-number">1.1.10.</span> <span class="nav-text">控制可见的四个访问修饰符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object：所有类的超类"><span class="nav-number">1.2.</span> <span class="nav-text">Object：所有类的超类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hashcode方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">hashcode方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型数组列表"><span class="nav-number">1.3.</span> <span class="nav-text">泛型数组列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对象包装器和自动装箱"><span class="nav-number">1.3.1.</span> <span class="nav-text">对象包装器和自动装箱</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反射"><span class="nav-number">1.4.</span> <span class="nav-text">反射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承的设计技巧"><span class="nav-number">1.5.</span> <span class="nav-text">继承的设计技巧</span></a></li></ol></li></ol></div>
             
 
           </div>
