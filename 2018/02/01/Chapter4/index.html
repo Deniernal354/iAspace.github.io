@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="「 」&#39;s Library">
 <meta property="og:description" content="第四章  对象与类面向对程序设计 面向对象的程序是由对象组成的 类是构造对象的模板/蓝图 由类构造对象的过程被称为创建类的实例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T09:03:51.352Z">
+<meta property="og:updated_time" content="2018-03-23T09:08:23.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 4">
 <meta name="twitter:description" content="第四章  对象与类面向对程序设计 面向对象的程序是由对象组成的 类是构造对象的模板/蓝图 由类构造对象的过程被称为创建类的实例">
@@ -439,102 +439,102 @@
 </ol>
 <h4 id="静态"><a href="#静态" class="headerlink" title="静态"></a>静态</h4><h5 id="静态域"><a href="#静态域" class="headerlink" title="静态域"></a>静态域</h5><ol>
 <li>将域定义为<code>static</code>，每个类中只有<strong>一个</strong>这样的域</li>
-<li>静态域属于类，不属于任何独立的对象，即使没有一个对象静态域也存在，即使有100个对象静态域也只有一个</li>
+<li>静态域属于<strong>类</strong>，不属于任何独立的对象，即使没有一个对象静态域也存在，即使有100个对象静态域也只有一个</li>
 </ol>
 <h5 id="静态常量"><a href="#静态常量" class="headerlink" title="静态常量"></a>静态常量</h5><ol>
-<li>例: Math类中定义了一个静态常量PI，可以使用<code>Math.PI</code>来使用，并且每个Math对象都有它自己的一份PI拷贝</li>
-<li>静态常量：<code>System.out</code>，out被声明为final，不允许将其它打印流赋给它</li>
-<li>最好不要将域设计为public,公有常量却没问题</li>
+<li>例: Math类中定义了一个<strong>静态常量PI</strong>，可以使用<code>Math.PI</code>来使用，并且每个Math对象都有它自己的一份PI拷贝</li>
+<li>静态常量：<code>System.out</code>，out被声明为<strong>final</strong>，不允许将其它打印流赋给它</li>
+<li>最好不要将域设计为<strong>public</strong>,公有常量却没问题</li>
 </ol>
 <h5 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h5><ol>
-<li>静态方法是一种不能向对象实施操作的方法<br><strong>例：</strong><code>Math.pow(x,a)</code>计算x的a次幂，不采用任何对象，没有隐式参数</li>
-<li>静态方法就是没有<code>this</code>参数的方法</li>
-<li>静态方法可以访问自身静态域</li>
-<li>静态方法可通过域名直接调用</li>
+<li>静态方法是一种<strong>不能向对象实施操作</strong>的方法<br><strong>例：</strong><code>Math.pow(x,a)</code>计算x的a次幂，不采用任何对象，没有隐式参数</li>
+<li>静态方法就是<strong>没有</strong><code>this</code>参数的方法</li>
+<li>静态方法可以访问<strong>自身静态域</strong></li>
+<li>静态方法可通过<strong>域名</strong>直接调用</li>
 </ol>
 <p><strong>下列情况下使用静态方法：</strong></p>
 <ul>
-<li>一个方法不用访问对象的状态，其所有参数都是通过显式参数传递</li>
-<li>一个方法只需要访问类的静态域</li>
+<li>一个方法不用访问<strong>对象的状态</strong>，其所有参数都是通过<strong>显式</strong>参数传递</li>
+<li>一个方法只需要访问类的<strong>静态域</strong></li>
 </ul>
 <h5 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h5><ol>
-<li>类似<code>LocalDate</code>和<code>NumerDormat</code>的类使用静态工厂方法来构造对象</li>
+<li>类似<code>LocalDate</code>和<code>NumerDormat</code>的类使用<strong>静态工厂</strong>方法来构造对象</li>
 </ol>
 <p><strong>为什么不使用构造器：</strong></p>
 <ol>
-<li>无法命名构造器，构造器必须和类名相同</li>
-<li>当使用构造器时，无法改变所构造的对象类型</li>
+<li>无法<strong>命名</strong>构造器，构造器必须和类名相同</li>
+<li>当使用构造器时，无法<strong>改变</strong>所构造的对象类型</li>
 <li>例：<code>Factory</code>方法返回<code>DecimalFormat</code>类对象是<code>NumerFormat</code>子类</li>
 </ol>
 <h5 id="main方法"><a href="#main方法" class="headerlink" title="main方法"></a>main方法</h5><ol>
-<li>不需要使用对象调用静态方法</li>
-<li><code>main</code>方法不对任何对象进行操作，启动程序时无任何一个对象</li>
-<li>静态的<code>main</code>方法将执行并创建程序所需对象</li>
+<li>不需要使用<strong>对象</strong>调用静态方法</li>
+<li><code>main</code>方法不对任何对象<strong>进行操作</strong>，启动程序时无任何一个对象</li>
+<li>静态的<code>main</code>方法将<strong>执行并创建</strong>程序所需对象</li>
 </ol>
 <h4 id="方法参数"><a href="#方法参数" class="headerlink" title="方法参数"></a>方法参数</h4><ol>
-<li>Java程序设计语言总是采用按值调用</li>
+<li>Java程序设计语言总是采用<strong>按值调用</strong></li>
 <li>方法参数共有两个类型: <strong>基本数据类型(数字，布尔)，对象引用</strong></li>
-<li>基本数据类型不会被方法更改，所改变的只是参数的拷贝</li>
+<li>基本数据类型不会被方法<strong>更改</strong>，所改变的只是参数的拷贝</li>
 <li>参数传递的方式：<strong>值传递和引用传递</strong>，对象引用是<strong>值传递</strong></li>
 </ol>
 <p><strong>方法参数使用情况：</strong></p>
 <ul>
-<li>一个方法不能修改一个基本数据类型的参数</li>
-<li>一个方法可以更改一个对象参数的状态</li>
-<li>一个方法不能让一个对象参数引用一个新参数</li>
+<li>一个方法不能<strong>修改</strong>一个基本数据类型的参数</li>
+<li>一个方法可以<strong>更改</strong>一个对象参数的状态</li>
+<li>一个方法不能让一个对象参数<strong>引用</strong>一个新参数</li>
 </ul>
 <h3 id="对象构造"><a href="#对象构造" class="headerlink" title="对象构造"></a>对象构造</h3><h4 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h4><ol>
-<li>有些类有多个构造器，如果多个方法有相同的名字、不同参数，便产生了重构</li>
-<li>如果构造器没有显式给域赋值，那么会被赋予默认值，影响代码可读性</li>
-<li>对象由无参数构造函数创建时，其状态会设置为适当的默认值</li>
-<li>如果在编写一个类时没有编写构造器，则构造器将所有实例域设置为默认值</li>
-<li>通过重载类的构造方法，可以采用多种形式设置类的实例域的初始状态</li>
-<li>关键词<code>this</code>引用方法的隐式参数，如果构造器的第一句使用<code>this(...)</code>这个构造器将调用同一个类的领一个构造器</li>
+<li>有些类有<strong>多个</strong>构造器，如果多个方法有相同的名字、不同参数，便产生了重构</li>
+<li>如果构造器没有<strong>显式</strong>给域赋值，那么会被赋予默认值，影响代码可读性</li>
+<li>对象由<strong>无参数</strong>构造函数创建时，其状态会设置为适当的默认值</li>
+<li>如果在编写一个类时<strong>没有编写</strong>构造器，则构造器将所有实例域设置为默认值</li>
+<li>通过重载类的构造方法，可以采用多种形式设置类的实例域的<strong>初始状态</strong></li>
+<li>关键词<code>this</code>引用方法的<strong>隐式参数</strong>，如果构造器的第一句使用<code>this(...)</code>这个构造器将调用同一个类的领一个构造器</li>
 </ol>
 <h4 id="调用构造器的具体步骤"><a href="#调用构造器的具体步骤" class="headerlink" title="调用构造器的具体步骤"></a>调用构造器的具体步骤</h4><ol>
-<li>所有数据域初始化为默认值</li>
-<li>按照在类中声明的语句依次对所有域进行初始化</li>
-<li>如果构造器的第一句话调用了第二个构造器，则运行第二个构造器主体</li>
-<li>执行这个构造器的主题</li>
+<li>所有数据域初始化为<strong>默认值</strong></li>
+<li>按照在类中声明的语句<strong>依次</strong>对所有域进行初始化</li>
+<li>如果构造器的第一句话<strong>调用</strong>了第二个构造器，则运行第二个构造器主体</li>
+<li>执行这个构造器的<strong>主体</strong></li>
 </ol>
 <h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><ol>
-<li>Java允许使用包将类组织起来，包使组织代码与别人提供的代码库分开管理</li>
-<li>使用包的主要原因是确保类名的唯一性</li>
-<li>从编译器角度看嵌套的包之间，没有任何关系</li>
+<li>Java允许使用包将类<strong>组织</strong>起来，包使组织代码与别人提供的代码库分开管理</li>
+<li>使用包的主要原因是确保类名的<strong>唯一性</strong></li>
+<li>从编译器角度看嵌套的包之间，<strong>没有任何关系</strong></li>
 </ol>
 <h4 id="类的导入"><a href="#类的导入" class="headerlink" title="类的导入"></a>类的导入</h4><p><strong>一个类可以使用所属包的所有类和其他包中的公有类</strong></p>
 <ol>
-<li>在类名前增加完整包名</li>
+<li>在类名前增加<strong>完整</strong>包名</li>
 <li>使用<code>import</code>语句</li>
 </ol>
 <h4 id="静态导入"><a href="#静态导入" class="headerlink" title="静态导入"></a>静态导入</h4><p><strong><code>import</code>不仅仅可以导入类，还有导入静态方法和静态域的功能</strong><br><strong>例：</strong><br><code>import static java.lang.System.*;</code></p>
 <h3 id="类路径"><a href="#类路径" class="headerlink" title="类路径"></a>类路径</h3><p><strong>类路径必须和包名匹配</strong></p>
 <ol>
-<li>将类放在一个目录下</li>
-<li>将Jar放在一个目录下</li>
-<li>设置类路径</li>
+<li><strong>将类放在一个目录下</strong></li>
+<li><strong>将Jar放在一个目录下</strong></li>
+<li><strong>设置类路径</strong></li>
 </ol>
 <h3 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h3><p><strong>Java包含工具javadoc，它可由源文件生成html文档</strong></p>
 <h4 id="注释的插入"><a href="#注释的插入" class="headerlink" title="注释的插入"></a>注释的插入</h4><ol>
-<li><code>/** ....*/</code>在标记后面紧跟着自由格式文本</li>
-<li>标记由@开始</li>
-<li>自由格式文本第一句应是概要性句子javadoc自动把这些文本提取出形成概要页</li>
-<li>自由格式文本中可用HTML修饰符</li>
-<li>类注释放在import后面类定义前面</li>
-<li>每个方法注释应放在方法之前</li>
-<li>只需要对公有域(静态常量)建立文档</li>
-<li>可直接将注释放在源文件中</li>
+<li><code>/** ....*/</code>在标记后面紧跟着<strong>自由格式</strong>文本</li>
+<li>标记由<strong>@</strong>开始</li>
+<li>自由格式文本第一句应是<strong>概要性</strong>句子，javadoc自动把这些文本提取出形成概要页</li>
+<li>自由格式文本中可用<strong>HTML修饰符</strong></li>
+<li>类注释放在<strong>import</strong>后面类定义前面</li>
+<li>每个方法注释应放在方法<strong>之前</strong></li>
+<li>只需要对<strong>公有域(静态常量)</strong>建立文档</li>
+<li>可直接将注释放在<strong>源文件</strong>中</li>
 </ol>
 <p><strong>想给包添加注释必须在包目录下添加独立文件</strong></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><strong>类设计的技巧：</strong></p>
 <ol>
-<li>一定要保证数据私有</li>
-<li>一定要对数据初始化</li>
-<li>不要在类中使用过多的基本类型</li>
-<li>不是所有的域都需要独立的域访问器/更改器</li>
-<li>将职责过多的类进行分类</li>
-<li>类名方法名要体现他的职责</li>
-<li>优先使用不可变的类</li>
+<li>一定要保证<strong>数据私有</strong></li>
+<li>一定要对<strong>数据初始化</strong></li>
+<li>不要在类中使用<strong>过多</strong>的基本类型</li>
+<li>不是所有的域都需要独立的<strong>域访问器/更改器</strong></li>
+<li>将职责过多的类进行<strong>分类</strong></li>
+<li>类名方法名要体现他的<strong>职责</strong></li>
+<li>优先使用<strong>不可变</strong>的类</li>
 </ol>
 
       
